@@ -174,7 +174,7 @@
      <t>Instead, the benchmark described in this draft proposes to report on a number of
      power-impacting factors, but does not enforce specific values or settings for those.
      The aim is to make the benchmark easier to perform. The comparison between benchmark
-     results may be somewhat less accurate or fair than with a more prescriptive benchmark, 
+     results MAY be somewhat less accurate or fair than with a more prescriptive benchmark, 
      but the hope is to have many more comparison points available, which would ultimately 
      provide a more robust image of the devices power demands and their evolution over time.</t>
 
@@ -196,10 +196,10 @@
 				<t>Ti is the total capacity of the interfaces for a fixed configuration model and traffic load
 				(the sum of the interface bandwidths)</t>
 				<t>Bi is the weighted multiplier for different traffic levels (note
-                that B1+...+Bj+...+Bm = 1, weight multipliers may be specified for router, switch differently,
+                that B1+...+Bj+...+Bm = 1, weight multipliers MAY be specified for router, switch differently,
 				3 typical weighted multipliers are 0.1,0.8,0.1)</t>
 				<t>m is the number of traffic load levels (if it is considered 100%, 30%, 0%; m = 3) Note that
-				traffic load levels may be specified differently for router and switch, e.g., traffic level 
+				traffic load levels MAY be specified differently for router and switch, e.g., traffic level 
 				100%,10%,0% for access router, traffic level 100%,30%,0% for core router and data center 
 				switch.</t>
      </list></t>
@@ -209,8 +209,8 @@
     <t>Issues<list>
       <t>The traffic loads and the weighted multipliers need to be clearly established a priori.</t>
       <t>It is unclear if the definition of the Ti's is/should be linked to the traffic load levels. 
-      For a given port configuration (which may result in 50% of the total capacity a device can provide), 
-      one may be interested in traffic load of e.g., 5% or 10% or the total capacity (not only 50%).</t>
+      For a given port configuration (which MAY result in 50% of the total capacity a device can provide), 
+      one MAY be interested in traffic load of e.g., 5% or 10% or the total capacity (not only 50%).</t>
     </list></t>
 
     <t>See Also:<list><t><xref target="ETSI-ES-203-136" />,<xref target="ITUT-L.1310" />
@@ -235,13 +235,13 @@
 
     <t>Issues:<list>
       <t>The traffic loads and the weighted multipliers need to be clearly established a priori.</t>
-      <t>Importantly, the traffic must be forwarded of the correct port! 
+      <t>Importantly, the traffic MUST be forwarded of the correct port! 
       It would be easy to cut power down by dropping all traffic, and, naturally, we do not want that.
-      A tolerance on packet loss and/or forwarding error must be specified somehow.  That tolerance could
+      A tolerance on packet loss and/or forwarding error MUST be specified somehow.  That tolerance could
       be zero for some benchmark problems (e.g., Non packet loss (NDR) estimation), and non-zero for others.
-      Tolerating some errors may be interesting to navigate the design space of energy saving techniques,
+      Tolerating some errors MAY be interesting to navigate the design space of energy saving techniques,
       such as approximate computing/routing. According to measurement procedure in section 6.5 of 
-      <xref target="ATIS-0600015.03.2013" />, the Equipment Unit Test (EUT) should be able to return to full NDR load. 
+      <xref target="ATIS-0600015.03.2013" />, the Equipment Unit Test (EUT) SHOULD be able to return to full NDR load. 
       Failure to do so disqualifies the test results. </t>
     </list></t>
 
@@ -293,14 +293,14 @@
       the number and type of transceiver connected, the forward traffic volume and pattern, 
       the version of the operating system, the room temperature and humidity/other environmental 
       dimensions, the aging of parts, etc. This metric does not allow to compare two equipments against 
-      each over, but it may be enough to assess the effect of a change on the same equipment; e.g.,
+      each over, but it MAY be enough to assess the effect of a change on the same equipment; e.g.,
       for optimizing the power draw by changing the running configuration.</t>
 	  
-      <t>Importantly, the traffic must be forwarded of the correct port! 
+      <t>Importantly, the traffic MUST be forwarded of the correct port! 
       It would be easy to cut power down by dropping all traffic, and we of course do not want that.
-      A tolerance on packet loss and/or forwarding error must be specified somehow. 
+      A tolerance on packet loss and/or forwarding error MUST be specified somehow. 
       That tolerance could be zero for some benchmark problems, and non-zero for others.
-      Tolerating some errors may be interesting to navigate the design space of energy saving techniques, 
+      Tolerating some errors MAY be interesting to navigate the design space of energy saving techniques, 
       such as approximate computing/routing.</t>
     </list></t>
 
@@ -327,7 +327,7 @@
    <t>Enforcing controlled conditions on test conditions (e.g.,
    Temperature) is important for test procedure to make sure test conditions
    repeatable <xref target="RFC6985" />. The measurement condition reported in <xref target="ATIS-0600015.2009" /> 
-   and <xref target="ITUT-L.1310" /> should be applied, e.g., the power measurements shall be 
+   and <xref target="ITUT-L.1310" /> SHOULD be applied, e.g., the power measurements SHALL be 
    performed in a laboratory environment under specific range of temperature, 
    humidity and atmosphere pressure.</t>
 
@@ -384,8 +384,8 @@
     <t>The traffic load supported by a device affects its energy consumption.
     Therefore, the benchmark MUST include different traffic loads.</t>
     
-    <t>The traffic load must specify packet sizes, packet rates, and inter-packet 
-    delays, as all may affect the energy consumption of network devices <xref target="ATIS-0600015.2009" />.
+    <t>The traffic load MUST specify packet sizes, packet rates, and inter-packet 
+    delays, as all MAY affect the energy consumption of network devices <xref target="ATIS-0600015.2009" />.
 	To enable replicable and comparable results, the benchmark can specify a set of well-defined
 	traffic traces that MUST be used.</t>
 
@@ -407,28 +407,28 @@
   <list style="hanging">
 		  
     <t hangText="Network Device Hardware and Software versions:"><br />For the benchmarking tests,
-    it must be specified.</t>
+    it MUST be specified.</t>
 
     <t hangText="Number and type of line cards:"><br />  For each test the total
-    number of line cards and their types can be varied and must be specified.</t>
+    number of line cards and their types can be varied and MUST be specified.</t>
 
     <t hangText="Number of enabled ports:"><br />  For each test the number of enabled and 
-    disabled ports must be specified.</t>
+    disabled ports MUST be specified.</t>
 
     <t hangText="Number of active ports:"><br />  For each test the number of active and 
-    inactive ports must be specified.</t>
+    inactive ports MUST be specified.</t>
 
     <t hangText="Port settings and interface types:"><br />  For each test the port configuration
     and settings need to be specified.</t>
 
     <t hangText="Port Utilization:"><br />  For each test the port utilization of each port 
-    must be specified.  The actual traffic load can use the information 
+    MUST be specified.  The actual traffic load can use the information 
     defined in <xref target="RFC2544" />.</t>
 
     <t hangText="Traffic trace:"><br />  For each test, the traffic trace used (amongst those 
-    prescribed by the benchmark) must be specified.</t>
+    prescribed by the benchmark) MUST be specified.</t>
 
-    <t hangText="Power measurement:"><br />  For each test it must be specified.
+    <t hangText="Power measurement:"><br />  For each test it MUST be specified.
     All power measurements are done in Watts.</t>
       
 	  </list>
@@ -501,10 +501,10 @@
 	 <section title="Power with Traffic Load">
 	 
 	  <t>Objective:<list><t>To determine the power drawn by a device. The dynamic power, which is 
-      added to the idle+ power, should be proportional to its traffic load.</t></list></t>
+      added to the idle+ power, SHOULD be proportional to its traffic load.</t></list></t>
 
 	  <t>Procedure:<list><t>A specific number of packets at a specific rate is sent to specific ports/linecards
-	  of the DUT. All DUT ports must operate under a specific traffic load, which is a percentage of the maximum throughput.</t></list></t>
+	  of the DUT. All DUT ports MUST operate under a specific traffic load, which is a percentage of the maximum throughput.</t></list></t>
 
       <t>Reporting format:<list><t>The results of the power measurement SHOULD be
       reported according to <xref target="report" />.</t></list></t>
