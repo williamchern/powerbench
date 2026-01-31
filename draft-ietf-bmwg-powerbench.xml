@@ -392,6 +392,16 @@
     <t>There are different interface types on a network device and the power usage 
     also depends on the kind of connector/transceiver used. 
     The interface type used needs to be specified as well.</t>
+
+    <t> Power measurements should be performed only after the DUT and the applied traffic condition have reached a stable operating state. 
+    Stability in this context refers to the absence of transient effects associated with traffic changes, configuration updates, or device thermal and cooling behavior. </t>
+
+    <t> The stabilization interval, defined as the time between applying a traffic load or configuration and the start of power measurement, must be reported. </t>
+
+    <t> The measurement interval, defined as the averaging window over which input power is recorded, and the averaging method used must also be reported. </t>
+
+    <t> This methodology does not mandate specific durations for stabilization or measurement intervals, as these may depend on device class, implementation, 
+    and test environment; however, reporting these intervals is required to support comparability of results. </t>
    
      </section>
 
@@ -430,7 +440,12 @@
 
     <t hangText="Power measurement:"><br />  For each test it must be specified.
     All power measurements are done in Watts.</t>
-      
+
+    <t hangText="Stabilization and measurement intervals:"><br /> For each power measurement, the stabilization interval and the measurement 
+    interval (averaging window) must be reported. The stabilization interval is the time between applying a traffic load or configuration and the start 
+    of power measurement. The measurement interval and the averaging method used to obtain the reported power value must also be specified. If these 
+    intervals differ by load level, the values per load level must be reported. </t>
+
 	  </list>
 
   </section>
@@ -503,8 +518,15 @@
 	  <t>Objective:<list><t>To determine the power drawn by a device. The dynamic power, which is 
       added to the idle+ power, should be proportional to its traffic load.</t></list></t>
 
-	  <t>Procedure:<list><t>A specific number of packets at a specific rate is sent to specific ports/linecards
-	  of the DUT. All DUT ports must operate under a specific traffic load, which is a percentage of the maximum throughput.</t></list></t>
+	  <t>Procedure:<list>
+    
+    <t>A specific number of packets at a specific rate is sent to specific ports/linecards
+	  of the DUT. All DUT ports must operate under a specific traffic load, which is a percentage of the maximum throughput.</t>
+    
+    <t>Power should be recorded only after the DUT and the offered load have reached a stable operating state. 
+    The stabilization interval and the measurement interval must be reported as described in <xref target="report" />.</t>
+    
+    </list></t>
 
       <t>Reporting format:<list><t>The results of the power measurement SHOULD be
       reported according to <xref target="report" />.</t></list></t>
@@ -515,10 +537,16 @@
 	 
 	  <t>Objective:<list><t>To determine the energy efficiency of the DUT.</t></list></t>
 
-	  <t>Procedure:<list><t>Collect the data for all the traffic loads and apply the formula of 
+	  <t>Procedure:<list>
+    
+    <t>Collect the data for all the traffic loads and apply the formula of 
 	  <xref target="terms" />. For example, with all DUT ports operating stably under a percentage
 	  of the maximum throughput (e.g. 100%, 30%, 0%), record the average input power and 
-	  calculate the total weighted power P and then the EER .</t></list></t>
+	  calculate the total weighted power P and then the EER .</t>
+
+    <t>The stabilization interval and measurement interval used to obtain the recorded average input power MUST be reported as described in <xref target="report" />.</t>
+    
+    </list></t>
 
       <t>Reporting format:<list><t>The results of the energy efficiency ratio SHOULD be
       reported according to <xref target="report" />.</t></list></t>
