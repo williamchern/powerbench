@@ -393,13 +393,13 @@
     also depends on the kind of connector/transceiver used. 
     The interface type used needs to be specified as well.</t>
 
-    <t> Power measurements should be performed only after the DUT and the applied traffic condition have reached a stable operating state. Stability in this context refers to the absence of transient effects associated with traffic changes, configuration updates, or device thermal and cooling behavior. </t>
+    <t> Power measurements SHOULD be performed only after the DUT and the applied traffic condition have reached a stable operating state. Stability in this context refers to the absence of transient effects associated with traffic changes, configuration updates, or device thermal and cooling behavior. </t>
 
-    <t> The stabilization interval, defined as the time between applying a traffic load or configuration and the start of power measurement, must be reported. </t>
+    <t> The stabilization interval, defined as the time between applying a traffic load or configuration and the start of power measurement, MUST be reported. </t>
 
-    <t> The measurement interval, defined as the averaging window over which input power is recorded, and the averaging method used must also be reported. </t>
+    <t> The measurement interval, defined as the averaging window over which input power is recorded, and the averaging method used MUST also be reported. </t>
 
-    <t> This methodology does not mandate specific durations for stabilization or measurement intervals, as these may depend on device class, implementation, and test environment; however, reporting these intervals is required to support comparability of results. </t>
+    <t> This methodology does not mandate specific durations for stabilization or measurement intervals, as these MAY depend on device class, implementation, and test environment; however, reporting these intervals is required to support comparability of results. </t>
    
      </section>
 
@@ -439,7 +439,7 @@
     <t hangText="Power measurement:"><br />  For each test it must be specified.
     All power measurements are done in Watts.</t>
 
-    <t hangText="Stabilization and measurement intervals:"><br /> For each power measurement, the stabilization interval and the measurement interval (averaging window) must be reported. The stabilization interval is the time between applying a traffic load or configuration and the start of power measurement. The measurement interval and the averaging method used to obtain the reported power value must also be specified. If these intervals differ by load level, the values per load level must be reported. </t>
+    <t hangText="Stabilization and measurement intervals:"><br /> For each power measurement, the stabilization interval and the measurement interval (averaging window) MUST be reported. The stabilization interval is the time between applying a traffic load or configuration and the start of power measurement. The measurement interval and the averaging method used to obtain the reported power value MUST also be specified. If these intervals differ by load level, the values per load level MUST be reported. </t>
 
 	  </list>
 
@@ -518,7 +518,7 @@
     <t>A specific number of packets at a specific rate is sent to specific ports/linecards
 	  of the DUT. All DUT ports must operate under a specific traffic load, which is a percentage of the maximum throughput.</t>
     
-    <t>Power should be recorded only after the DUT and the offered load have reached a stable operating state. The stabilization interval and the measurement interval must be reported as described in <xref target="report" />.</t>
+    <t>Power SHOULD be recorded only after the DUT and the offered load have reached a stable operating state. The stabilization interval and the measurement interval MUST be reported as described in <xref target="report" />.</t>
     
     </list></t>
 
