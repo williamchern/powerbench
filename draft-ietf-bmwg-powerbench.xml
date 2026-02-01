@@ -479,8 +479,16 @@
 	  <t>Objective:<list><t>To determine the power drawn by the network device in normal operation 
     but without forwarding traffic.</t></list></t>
 	 
-	  <t>Procedure:<list><t>The measurement is done with the device fully configured to forward traffic
-    but without any traffic actually present. All interfaces MUST be up.</t></list></t>
+	  <t>Procedure:<list>
+    
+    <t>The measurement is done with the device fully configured to forward traffic
+    but without any traffic actually present. All interfaces MUST be up.</t>
+
+    <t> Control-plane, management-plane, and background system functions MAY remain active during this measurement unless explicitly disabled for the
+    purpose of the test. Examples include routing protocol adjacencies, control signaling, telemetry processes, and thermal management mechanisms. The
+    operational state of these functions during the measurement MUST be reported, as they can influence the observed power consumption. </t>
+    
+    </list></t>
 
       <t>Reporting format:<list><t>The results of the power measurement SHOULD be
     reported according to <xref target="report" />.</t></list></t>
@@ -496,8 +504,16 @@
 	  <t>Objective:<list><t>To determine the power drawn by the network device in normal operation 
     with very small but non-zero traffic to forward.</t></list></t>
 	 
-	  <t>Procedure:<list><t>The measurement is done with the device fully configured and the "minimum" 
-    traffic trace.</t></list></t>
+	  <t>Procedure:<list>
+    
+    <t>The measurement is done with the device fully configured and the "minimum" 
+    traffic trace.</t>
+
+    <t> Control-plane, management-plane, and background system functions MAY remain active during this measurement unless explicitly disabled for the
+    purpose of the test. Examples include routing protocol adjacencies, control signaling, telemetry processes, and thermal management mechanisms. The
+    operational state of these functions during the measurement MUST be reported, as they can influence the observed power consumption. </t>
+    
+    </list></t>
 
       <t>Reporting format:<list><t>The results of the power measurement SHOULD be
     reported according to <xref target="report" />.</t></list></t>
