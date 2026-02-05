@@ -157,13 +157,8 @@
       (also known as "longitudinal" or "self-referential" benchmarking).</t>
 	</list></t>
 
-<<<<<<< Updated upstream
-    <t>Achieving either objective requires a well-defined set of principles prescribing
-    what must be measured, how it must be measured, and which results must be reported. 
-=======
     <t>Achieving any of these objectives requires a well-defined set of principles prescribing
     what must be measured, how must be measured, and which results must be reported. 
->>>>>>> Stashed changes
     Providing those principles is the objective of this draft.
     These are simply called "the benchmark" in the rest of this draft.</t>
 
@@ -228,15 +223,9 @@
 
     <t>Issues<list>
       <t>The traffic loads and the weighted multipliers need to be clearly established a priori.</t>
-<<<<<<< Updated upstream
-      <t>It is unclear if the definition of the Ti's is/should be linked to the traffic load levels. 
-      For a given port configuration (which MAY result in 50% of the total capacity a device can provide), 
-      one MAY be interested in traffic load of e.g., 5% or 10% or the total capacity (not only 50%).</t>
-=======
       <t>It is unclear if the definition of the Ti is/should be linked to the traffic load levels. 
       For a given port configuration (which may result in 50% of the total capacity a device can provide), 
       one may be interested in traffic load of e.g., 5% or 10% or the total capacity (not only 50%).</t>
->>>>>>> Stashed changes
     </list></t>
 
     <t>See Also:<list><t><xref target="ETSI-ES-203-136" />,<xref target="ITUT-L.1310" />
@@ -263,20 +252,11 @@
       <t>The traffic loads and the weighted multipliers need to be clearly established a priori.</t>
       <t>Importantly, the traffic MUST be forwarded of the correct port! 
       It would be easy to cut power down by dropping all traffic, and, naturally, we do not want that.
-<<<<<<< Updated upstream
-      A tolerance on packet loss and/or forwarding error MUST be specified somehow.  That tolerance could
-      be zero for some benchmark problems (e.g., Non packet loss (NDR) estimation), and non-zero for others.
-      Tolerating some errors MAY be interesting to navigate the design space of energy saving techniques,
-      such as approximate computing/routing. According to measurement procedure in section 6.5 of 
-      <xref target="ATIS-0600015.03.2013" />, the Equipment Unit Test (EUT) SHOULD be able to return to full NDR load. 
-=======
       A tolerance on packet loss and/or forwarding error must be specified somehow.  That tolerance could
       be zero for some benchmark problems (e.g., Non-Drop Rate (NDR) estimation), and non-zero for others.
       Tolerating some errors may be interesting to navigate the design space of energy saving techniques,
       such as approximate computing/routing. According to measurement procedure in section 6.5 of 
-      <xref target="ATIS-0600015.03.2013" />, the Equipment Under Test (EUT) should be able to return to full NDR load. 
->>>>>>> Stashed changes
-      Failure to do so disqualifies the test results. </t>
+      <xref target="ATIS-0600015.03.2013" />, the Equipment Under Test (EUT) should be able to return to full NDR load. Failure to do so disqualifies the test results. </t>
     </list></t>
 
     <t>See Also:<list><t><xref target="ETSI-ES-203-136" />,<xref target="ITUT-L.1310" />
@@ -301,8 +281,8 @@
 	 <t>Measurement units:<list><t>Gbps/Watt.</t></list></t>
 
      <t>Issues:<list>
-      <t>The traffic loads  and the weighted multipliers need to be clearly established a priori.</t>
-      <t>There are other approaches defined in ITU-T and ATIS that leverage the total capacity of the interfaces (T) which is the sum of all interface throughputs and is not linked to traffic load levels. This result EER is a scaled value proportional to the EER using the total weighted capacity of the interfaces (T)</t>
+      <t>The traffic loads and the weighted multipliers need to be clearly established a priori.</t>
+      <t>Optionally the total capacity of the interfaces (T) can be used in replacement of the total weighted capacity of the interfaces. The former is the sum of all interface throughputs and is not linked to traffic load levels. This result EER is a scaled value proportional to the EER using the total weighted capacity of the interfaces (T)</t>
      </list></t>
 
      <t>See Also:<list><t><xref target="ETSI-ES-203-136" />,<xref target="ITUT-L.1310" />
@@ -467,15 +447,10 @@
     and settings need to be specified.</t>
 
     <t hangText="Port Utilization:"><br />  For each test the port utilization of each port 
-<<<<<<< Updated upstream
     MUST be specified.  The actual traffic load can use the information 
-    defined in <xref target="RFC2544" />.</t>
-=======
-    must be specified.  The actual traffic load can use the information 
     defined in <xref target="RFC2544" />. To characterize power consumption under realistic 
     traffic conditions, the actual traffic load can use variable 
     packet size distributions as specified in <xref target="RFC6985" />.</t>
->>>>>>> Stashed changes
 
     <t hangText="Traffic trace:"><br />  For each test, the traffic trace used (amongst those 
     prescribed by the benchmark) MUST be specified.</t>
